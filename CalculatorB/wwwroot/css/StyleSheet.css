@@ -1,0 +1,84 @@
+﻿.flex-box-model {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    border: 7px solid #acbe85;
+    background-color: #aacfe7;
+    width: 270px;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.dis-box {
+    border: solid black 0.5px;
+    background-color: #ffe;
+    padding:18px;
+    color: black;
+    width: 93%;
+    height: 100%; 
+    font-size: 18px;
+    margin-top:10px;
+}
+
+#exp {
+    margin: 2px 0px;
+    text-align: right;
+    padding: 2px;
+    font-weight: 500;
+    width: 98%;
+    padding-bottom: 6%;
+    word-break: break-all;
+}
+
+#output-number {
+    margin: 0px 0px;
+    text-align: right;
+    padding: 2px;
+    font-weight: 550;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 4px;
+}
+
+.button {
+    display: inline;
+    background-color: #efefef;
+    border-bottom: 4px solid #88a5bb;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 14px 22px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 1px 0px 5px;
+}
+
+.yellow-btn {
+    background-color: #f2ffa0;
+    margin-right: 5px;
+}
+
+.button2 {
+    padding: 14px 23px;
+}
+
+#button-c {
+    background-color: #f0a3aa;
+    padding: 14px 21px;
+}
+
+.button:hover {
+    background-color: #e6e5e5;
+}
+
+.yellow-btn:hover {
+    background-color: #edfd81;
+}
+
+#button-c:hover {
+    background-color: #e99196;
+}

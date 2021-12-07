@@ -1,0 +1,75 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@namespace CalculatorB.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="CalculatorB.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    @RenderBody()
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+    <script>
+        let flag=0
+        let flag_1=0
+
+        function clearScreen(){
+            document.getElementById('result').value = " ";
+        }
+
+        function displayOnScreen(val){
+            if (flag===1){
+                clearScreen();
+                flag=0
+        }
+            document.getElementById('result').value += val
+        }
+
+        function calculate(){
+            try{
+                answer=eval(document.getElementById('result').value)
+       
+                if (answer===undefined &&  typeof(document.getElementById('result').value)!='number'){
+                    //
+                }
+                else if(answer===undefined){
+                    document.getElementById('result').value='Syntax Error'   
+                    flag=1
+                }
+                else{
+                document.getElementById('result').value=answer
+                flag=1
+                }
+        
+            }
+            catch(err) {
+                document.getElementById("result").value = 'Syntax Error';
+                flag=1
+              }
+        }
+ 
+    </script>
+
+
+</body>
+</html>

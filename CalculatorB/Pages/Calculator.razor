@@ -1,0 +1,50 @@
+﻿@page "/"
+@inject IJSRuntime JS
+<link rel="stylesheet" href="~/css/StyleSheet.css">
+
+<h3>Calculator</h3>
+
+    <div class="flex-box-model">
+       
+        <input type="text" class="dis-box" id="result" >
+   
+        
+        <div class="btn-container">
+            <button class="button" value="1" @onclick="display">1</button>
+            <button class="button" value="2" onclick='displayOnScreen(2)'>2</button>
+            <button class="button" value="3" onclick='displayOnScreen(3)'>3</button>
+            <button class="button yellow-btn" value="+" onclick='displayOnScreen("+")'>+</button>
+            <button class="button" value="4" onclick='displayOnScreen(4)'>4</button>
+            <button class="button" value="5" onclick='displayOnScreen(5)'>5</button>
+            <button class="button" value="6" onclick='displayOnScreen(6)'>6</button>
+            <button class="button yellow-btn button2" value="-" onclick='displayOnScreen("-")'>-</button>
+            <button class="button" value="7" onclick='displayOnScreen(7)'>7</button>
+            <button class="button" value="8" onclick='displayOnScreen(8)'>8</button>
+            <button class="button" value="9" onclick='displayOnScreen(9)'>9</button>
+            <button class="button yellow-btn button2" value="*"  onclick='displayOnScreen("*")'>*</button>
+            <button id="button-c" class="button" @onclick="Clear">C</button>
+            <button class="button" value="0" onclick='displayOnScreen(0)'>0</button>
+            <button id="button-e" class="button" @onclick="Calculate">=</button>
+            <button class="button yellow-btn button2" value="/" onclick='displayOnScreen("/")'>/</button>
+        </div>
+    </div>
+
+ 
+
+@code {
+    private string? show;
+    private async Task display()
+    {
+        await JS.InvokeVoidAsync("displayOnScreen",1);
+    }
+
+    private async Task Calculate()
+    {
+        await JS.InvokeVoidAsync("calculate");
+    }
+
+    private async Task Clear()
+    {
+        await JS.InvokeVoidAsync("clearScreen");
+    }
+}
