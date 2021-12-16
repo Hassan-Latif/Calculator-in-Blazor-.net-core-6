@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZOYqMN73JVUITJzG6VEc/Nbr+ahIrI4yEPJOikPXTPg=",
+  "Hash": "r+XxrAvm12T+3hfNMhumSPtw8uRRGWFA2Awr8IuyWRM=",
   "Source": "CalculatorB",
   "BasePath": "_content/CalculatorB",
   "Mode": "Default",
@@ -287,6 +287,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Hassan\\Desktop\\CalculatorB\\CalculatorB\\wwwroot\\Script\\Script.js",
+      "SourceId": "CalculatorB",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hassan\\Desktop\\CalculatorB\\CalculatorB\\wwwroot\\",
+      "BasePath": "_content/CalculatorB",
+      "RelativePath": "Script/Script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Script\\Script.js"
     }
   ]
 }
